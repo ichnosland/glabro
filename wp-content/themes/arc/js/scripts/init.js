@@ -1,0 +1,19 @@
+//////////////////////////////////////////////////////////////
+
+/// INIT ON READY
+jQuery(document).ready(function(){
+	visible();    
+	jQuery(".lazy").lazyload();
+});
+
+//////////////////////////////////////////////////////////////
+///	INIT ON LOAD
+jQuery(window).load(function(e) {
+ 	jQuery(".lazy").lazyload();
+});
+
+//////////////////////////////////////////////////////////////
+///	INIT ANYWAY
+jQuery(function() {
+    jQuery(".lazy").lazyload();
+});

@@ -1,0 +1,33 @@
+{
+  "name": "wordpress-theme",
+  "version": "1.0.0",
+  "description": "wordpress theme builder",
+  "devDependencies": {
+    "connect-livereload": "^0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-connect-proxy": "^0.2.0",
+    "grunt-connect-rewrite": "^0.2.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-open": "^0.2.3",
+    "less-plugin-autoprefix": "^1.5.1"
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-optipng": "^5.2.1",
+    "imagemin-svgo": "^5.2.2",
+    "serve-static": "^1.12.4"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Arc Italia arcww.it",
+  "license": "ISC"
+}

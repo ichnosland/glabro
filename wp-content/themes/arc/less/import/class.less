@@ -1,0 +1,52 @@
+.sans-regular() {
+  font-family: "PFTransportBlack-Regular", PFTransportBlack-Regular, "Century Gothic", CenturyGothic, AppleGothic,
+    sans-serif;
+  font-weight: normal;
+}
+
+.sans-light() {
+  font-family: "PFTransportThin-Regular", PFTransportThin-Regular, "Century Gothic", CenturyGothic, AppleGothic,
+    sans-serif;
+  font-weight: normal;
+}
+
+.sans-bold() {
+  font-family: "PFTransport-Bold", PFTransport-Bold, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-weight: normal;
+}
+
+.italic-regular() {
+  font-family: "PFCentroSlabPro-Regular", PFCentroSlabPro-Regular, serif;
+  font-weight: normal;
+}
+
+.italic-light() {
+  font-family: "PFCentroSlabPro-LightItalic", PFCentroSlabPro-LightItalic, serif;
+  font-weight: normal;
+}
+
+.italic-medium() {
+  font-family: "PFCentroSlabPro-MediumItalic", PFCentroSlabPro-MediumItalic, serif;
+  font-weight: normal;
+}
+
+.italic-thin() {
+  font-family: "PFTransportThin-Regular", PFTransportThin-Regular, serif;
+  font-weight: normal;
+}
+
+.transition() {
+  transition: all 0.3s ease-in-out;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// add incremental delay
+.mixin-delay-loop(@i) when(@i > 0) {
+  &:nth-child(@{i}) {
+    animation-delay: 20 + @i * 100ms;
+  }
+  .mixin-delay-loop(@i - 1);
+}

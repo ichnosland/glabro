@@ -1,0 +1,190 @@
+header {
+  padding: 0 30px;
+  height: 88px;
+  border-bottom: 2px solid @color-yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+
+  .logo {
+    //width: 20%;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    img {
+      height: 60px;
+    }
+  }
+
+  .navigation {
+    display: none;
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background: @color-yellow;
+      li {
+        width: 100%;
+        display: block;
+        text-align: center;
+        outline: none;
+        animation-name: fadeInUp;
+        animation-duration: 0.6s;
+        animation-fill-mode: both;
+        a {
+          .sans-light();
+          text-decoration: none;
+          text-transform: uppercase;
+          color: black;
+          position: relative;
+          display: inline-block;
+          margin: 15px 25px;
+          outline: none;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 18px;
+          overflow: hidden;
+          padding: 0 4px;
+          height: 1em;
+
+          span {
+            position: relative;
+            display: inline-block;
+            -webkit-transition: -webkit-transform 0.3s;
+            -moz-transition: -moz-transform 0.3s;
+            transition: transform 0.3s;
+          }
+
+          &.active {
+            outline: none;
+            .sans-bold();
+          }
+        }
+
+        &:hover,
+        &:focus {
+          a {
+            .sans-bold();
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .search {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 20%;
+    animation-name: fadeInLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    .search-icon {
+      cursor: pointer;
+      background-image: url(../assets/png/search.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 35px;
+      height: 35px;
+    }
+    #s {
+      .transition();
+      padding: 5px;
+      min-width: 0px;
+      position: absolute;
+      right: 35px;
+      height: 35px;
+      width: 0px;
+      border: 0px solid @color-yellow;
+      color: @color-gray-font;
+      &.active,
+      &:focus {
+        width: 100%;
+        min-width: calc(~"100vw - 300px");
+        border: 1px solid @color-yellow;
+      }
+    }
+    &:hover {
+      #s {
+        width: 100%;
+        min-width: calc(~"100vw - 300px");
+        border: 1px solid @color-yellow;
+      }
+    }
+  }
+}
+
+header {
+  .logo {
+    width: 100%;
+    text-align: center;
+    animation-name: fadeIn;
+  }
+
+  .search {
+    width: 70px;
+    #s {
+      &.active,
+      &:focus {
+        min-width: calc(~"100vw - 150px");
+      }
+    }
+    &:hover {
+      #s {
+        min-width: calc(~"100vw - 150px");
+      }
+    }
+  }
+
+  .hamburger {
+    animation-name: fadeInRight;
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+  }
+}
+
+body {
+  overflow-x: hidden;
+
+  &.open-menu {
+    position: fixed;
+    width: 100%;
+
+    header {
+      .navigation {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 88px;
+        z-index: 3;
+
+        .menu-menu-1-container {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          overflow: scroll;
+          background: rgba(0, 0, 0, 0.9);
+        }
+
+        ul {
+          /*background: white;*/
+          position: relative;
+          left: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          height: calc(~"100vh");
+
+          li {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
