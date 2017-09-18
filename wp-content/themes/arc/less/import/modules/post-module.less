@@ -6,6 +6,7 @@
   min-width: 270px;
   width: 33%;
   height: 470px;
+  margin-bottom: 20px;
   .box-shadow;
   .transitions;
   &:hover {
@@ -129,6 +130,7 @@
 
 .hover {
   &:extend(.post-module:hover all);
+  .box-shadow(@blur:0px; @color: fade(@black, 30%););
   .post-content {
     .description {
       display: block !important;

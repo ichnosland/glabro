@@ -50,9 +50,7 @@
 	  		</div>
 		</div>
 	</a>
-	<?php
-		
-?>
+
 
 <?php
 		$count++;
