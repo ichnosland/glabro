@@ -47,7 +47,7 @@
 			  		<p class='description'><?php echo get_the_excerpt();?></p>
 			  		<div class='post-meta'>
 						<span class='timestamp'>
-						<?php echo get_the_time(); ?>
+						<?php echo get_the_date(); ?>
 						</span>
 			  		</div>
 				</div>

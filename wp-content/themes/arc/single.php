@@ -47,7 +47,8 @@
     endif;
 ?>	
 </div>
-	
+
+	<?php get_template_part('includes/related'); ?>
 	
 <?php
 	get_footer();
