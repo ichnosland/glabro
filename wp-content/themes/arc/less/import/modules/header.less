@@ -20,16 +20,32 @@ header {
   }
 
   .navigation {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 88px;
+    z-index: 3;
+    left: -2000px;
+    width: 50%;
+    opacity: .95;
+    .transition();
+        
     ul {
       width: 100%;
       display: flex;
       justify-content: space-around;
       background: @color-yellow;
+      position: relative;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      height: calc(~"100vh");
+
       li {
         width: 100%;
         display: block;
         text-align: center;
+        padding: 20px;
         outline: none;
         animation-name: fadeInUp;
         animation-duration: 0.6s;
@@ -100,19 +116,27 @@ header {
       right: 35px;
       height: 35px;
       width: 0px;
-      border: 0px solid @color-yellow;
-      color: @color-gray-font;
+      height: 85px;
+      border: 1px solid transparent;
+      position: absolute;
+      top: -24px;
+      right: 60px;
       &.active,
       &:focus {
-        width: 100%;
-        min-width: calc(~"100vw - 300px");
+        outline:0;
+        min-width: calc(~"100vw - 110px");
         border: 1px solid @color-yellow;
+        background: yellow;
+        color: black;
+        height: 85px;
+        position: absolute;
+        top: -24px;
+        right: 60px;
       }
     }
     &:hover {
       #s {
-        width: 100%;
-        min-width: calc(~"100vw - 300px");
+        width: 300px;
         border: 1px solid @color-yellow;
       }
     }
@@ -131,12 +155,22 @@ header {
     #s {
       &.active,
       &:focus {
-        min-width: calc(~"100vw - 150px");
+        min-width: calc(~"100vw - 90px");
+        border: 1px solid @color-yellow;
+        background: yellow;
+        color: black;
+        padding-left: 30px;
+        font-size: 1.5em;
+        font-weight: 100;
       }
     }
     &:hover {
       #s {
-        min-width: calc(~"100vw - 150px");
+        min-width: calc(~"100vw - 110px");
+        border: 1px solid @color-yellow;
+        background: yellow;
+        color: black;
+        
       }
     }
   }

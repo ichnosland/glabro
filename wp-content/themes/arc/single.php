@@ -2,7 +2,7 @@
 	get_header();
 ?>
 	
-<div class="main" id="main">
+<div class="main" id="article">
 
 <?php 
 
@@ -29,10 +29,9 @@
 					}  ?>
 			</div>
 	  		<h1 class='title'><?php echo get_the_title();?></h1>
-	  		<p class='description'><?php echo get_the_excerpt();?></p>
 	  		<div class='post-meta'>
 				<span class='timestamp'>
-				<?php echo get_the_time(); ?>
+				<?php echo get_the_date(); ?>
 				</span>
 			  </div>
 		</div>

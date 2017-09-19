@@ -4,9 +4,9 @@
   display: block;
   background: @white;
   min-width: 270px;
-  width: 33%;
+  width: 33.3333333%;
   height: 470px;
-  margin-bottom: 20px;
+  margin: 20px -20px; 
   .box-shadow;
   .transitions;
   &:hover {
@@ -30,6 +30,7 @@
     height: 470px;
     overflow: hidden;
     .date {
+      cursor:alias;
       position: absolute;
       top: 20px;
       right: 20px;
@@ -37,7 +38,7 @@
       background: @accent;
       width: 55px;
       height: 55px;
-
+      z-index: 10;
       .border-radius(100%);
       color: @white;
       font-weight: 700;
@@ -68,6 +69,8 @@
   &.fullpage {
     width: 100%;
     height: 80vh;
+    margin: 0px; 
+
     .thumbnail {
       height: 80vh;
     }

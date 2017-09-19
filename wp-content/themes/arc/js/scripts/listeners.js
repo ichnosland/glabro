@@ -14,6 +14,24 @@ jQuery(document).ready(function(){
 
 	});
 
+//////////////////////////////////////////////////////////////
+
+	/// flip card on author avatar click
+	jQuery('.js-author-info').click(function(e){
+		e.preventDefault();
+		console.log('author');
+		var authorID = jQuery(this).data('author');
+		jQuery(this).closest('.flip-container').addClass('flip');
+	});
+
+	jQuery('.js-close-info').click(function(e){
+		e.preventDefault();
+		console.log('author');
+		var authorID = jQuery(this).data('author');
+		jQuery(this).closest('.flip-container').removeClass('flip');
+	});
+
+
 
 
 });
